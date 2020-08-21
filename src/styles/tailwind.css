@@ -2,4 +2,32 @@
 
 @tailwind components;
 
+.wrapper {
+    @apply flex items-center justify-center w-screen h-screen bg-gray-300 p-4;
+}
+
+.modal {
+    min-width: 350px;
+    @apply max-w-4xl rounded overflow-hidden shadow-lg flex flex-col flex-1 justify-center items-center bg-white;
+}
+
+.header {
+    -moz-box-shadow: inset 0px -5px 8px -5px #1a1a1a;
+    -webkit-box-shadow: inset 0px -5px 8px -5px #1a1a1a;
+    box-shadow: inset 0px -5px 8px -5px #1a1a1a;
+    @apply w-full flex justify-center items-center py-4 bg-gray-500 text-white;
+}
+
+.stepper {
+    @apply px-4 py-2 mx-4 text-white bg-gray-700 rounded-full;
+}
+
+.stepper-done {
+    @apply bg-red-600;
+}
+
+.stepper-current {
+    @apply text-xl bg-blue-900;
+}
+
 @tailwind utilities;
