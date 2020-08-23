@@ -6,6 +6,9 @@ import * as serviceWorker from './serviceWorker';
 // Importamos los estilos de TailwindCSS
 import './styles/index.css';
 
+// Importamos la configuración de internacionalización
+import './i18n';
+
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

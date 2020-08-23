@@ -605,6 +605,12 @@ video {
   }
 }
 
+body {
+  --text-opacity: 1;
+  color: #2c5282;
+  color: rgba(44, 82, 130, var(--text-opacity));
+}
+
 .wrapper {
   display: flex;
   align-items: center;
@@ -633,7 +639,7 @@ video {
   background-color: rgba(255, 255, 255, var(--bg-opacity));
 }
 
-.header {
+.modal-header {
   box-shadow: inset 0px -5px 8px -5px #1a1a1a;
   width: 100%;
   display: flex;
@@ -647,6 +653,23 @@ video {
   --text-opacity: 1;
   color: #fff;
   color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+.modal-body {
+  width: 100%;
+  display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+  padding: 1.5rem;
+  text-align: center;
 }
 
 .stepper {

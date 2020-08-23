@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 
 import Modal from './components/Modal';
 import ModalHeader from './components/ModalHeader';
+import ModalBody from './components/ModalBody';
+import ProductInformation from './components/steps/ProductInformation';
+import SecondStep from './components/steps/SecondStep';
+import ThirdStep from './components/steps/ThirdStep';
 
 const App: React.FC<{}> = () => {
     return (
-        <main className="wrapper">
-            <Modal>
-                <>
+        <Suspense fallback="loading">
+            <main className="wrapper">
+                <Modal>
                     <ModalHeader />
-                    Hola
-                </>
-            </Modal>
-        </main>
+                    <ModalBody>
+                        <ProductInformation />
+                    </ModalBody>
+                </Modal>
+            </main>
+        </Suspense>
     );
 };
 
