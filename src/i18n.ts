@@ -15,7 +15,6 @@ i18n.use(LanguageDetector)
     .use(initReactI18next)
     .init({
         fallbackLng: 'es',
-        debug: true,
         resources: {
             en: {
                 common: commonEN,

@@ -1,4 +1,11 @@
 {
     "firstImage": "Guarda aquí todas tus contraseñas, datos o cualquier información, olvida las notas de papel y las aplicaciones no protegidas.",
-    "secondImage": "Crea tu contraseña maestra: solo tú tendrás acceso a tus secretos con ella."
+    "altFirstImage": "Olvida las notas de papel y las aplicaciones no protegidas.",
+    "secondImage": "Crea tu contraseña maestra: solo tú tendrás acceso a tus secretos con ella.",
+    "altSecondImage": "Crea tu contraseña maestra",
+    "createPasswordManager": "Crea tu Password Manager",
+    "howItWorks": "Cómo funciona",
+    "howItWorksExplanation": "En primer lugar, debes crear tu contraseña. No podrás recuperarla, así que recuérdala bien.",
+    "whatCanYouSave": "Qué datos puedes guardar",
+    "whatCanYouSaveExplanation": "Por ejemplo, el número de tu tarjeta, el PIN y el PUK de tu teléfono móvil, el número de serie de alguno de tus dispositivos o cualquier información que necesites tener en un lugar seguro."
 }

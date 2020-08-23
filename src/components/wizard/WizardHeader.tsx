@@ -1,9 +1,9 @@
 import React from 'react';
-import Stepper from './Stepper';
+import Stepper from '../Stepper';
 
-const ModalHeader: React.FC<{}> = () => {
+const WizardHeader: React.FC<{}> = () => {
     return (
-        <header className="modal-header">
+        <header className="wizard-header">
             <Stepper step={1} current={false} completed={true} />
             <Stepper step={2} current={true} completed={false} />
             <Stepper step={3} current={false} completed={false} />
@@ -11,4 +11,4 @@ const ModalHeader: React.FC<{}> = () => {
     );
 };
 
-export default ModalHeader;
+export default WizardHeader;

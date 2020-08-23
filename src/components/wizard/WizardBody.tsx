@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ModalBody: React.FC<{}> = props => {
+const WizardBody: React.FC<{}> = props => {
     return (
         <section className="modal-body lg:px-24 lg:py-8">
             {props.children}
@@ -8,4 +8,4 @@ const ModalBody: React.FC<{}> = props => {
     );
 };
 
-export default ModalBody;
+export default WizardBody;

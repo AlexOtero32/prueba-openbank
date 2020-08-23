@@ -3,43 +3,84 @@
 @tailwind components;
 
 body {
-    @apply text-blue-800;
+    @apply text-secondary bg-gray-300;
 }
 
 .wrapper {
-    @apply flex items-center justify-center w-screen h-screen bg-gray-300 p-4;
+    @apply flex items-center justify-center w-screen h-full p-4;
 }
 
-.modal {
+/* ------------- Wizard ------------- */
+
+.wizard {
     min-width: 350px;
-    @apply max-w-4xl rounded overflow-hidden shadow-lg flex flex-col flex-1 justify-center items-center bg-white;
+    @apply max-w-4xl rounded shadow-lg flex flex-col flex-1 justify-center items-center bg-white;
 }
 
-.modal-header {
+.wizard-header {
     -moz-box-shadow: inset 0px -5px 8px -5px #1a1a1a;
     -webkit-box-shadow: inset 0px -5px 8px -5px #1a1a1a;
     box-shadow: inset 0px -5px 8px -5px #1a1a1a;
     @apply w-full flex justify-center items-center py-4 bg-gray-500 text-white;
 }
 
-.modal-body {
-    @apply w-full flex px-4 py-2;
+.wizard-body {
+    @apply w-full flex flex-col px-4 py-2;
+}
+
+.wizard-footer {
+    @apply w-full flex p-4 border-t-2 border-gray-300;
+}
+
+/* ------------- Elementos internos del wizard ------------- */
+
+.title {
+    display: inline-block;
+    padding-bottom: 5px;
+    position: relative;
+    @apply text-2xl font-bold;
+}
+
+.title:before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    bottom: 0;
+    border-bottom: 5px solid;
+    @apply border-primary;
 }
 
 .image-container {
     @apply flex flex-col flex-1 p-6 text-center;
 }
 
+.image-container img {
+    @apply rounded mb-2;
+}
+
+/* ------------- Steppers ------------- */
+
 .stepper {
     @apply px-4 py-2 mx-4 text-white bg-gray-700 rounded-full;
 }
 
 .stepper-done {
-    @apply bg-red-600;
+    @apply bg-primary;
 }
 
 .stepper-current {
-    @apply text-xl bg-blue-900;
+    @apply text-xl bg-secondary;
+}
+
+/* ------------- Botones ------------- */
+
+.button-cancel {
+    @apply font-bold;
+}
+
+.button-next {
+    @apply bg-secondary px-4 py-2 font-bold text-white;
 }
 
 @tailwind utilities;
