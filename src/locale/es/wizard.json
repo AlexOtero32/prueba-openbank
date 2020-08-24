@@ -12,5 +12,11 @@
     "masterPassword": "Crea tu contraseña maestra",
     "repeatMasterPassword": "Repite tu contraseña maestra",
     "descriptionCreateHint": "También puedes crear una pista que te ayude a recordar tu contraseña maestra.",
-    "createHint": "Crea tu pista para recordar tu contraseña (opcional)"
+    "createHint": "Crea tu pista para recordar tu contraseña (opcional)",
+    "passwordManagerCreatedTitle": "¡Tu Password Manager ya está creado!",
+    "passwordManagerCreatedDescription": "Tu Password Manager ha sido creado, ahora podrás guardar tus contraseñas en un lugar seguro.",
+    "creationErrorTitle": "Ha ocurrido un error",
+    "creationErrorDescription": "No hemos podido modificar tu contraseña maestra. Inténtalo más tarde.",
+    "access": "Acceder",
+    "return": "Volver a Password Manager >"
 }

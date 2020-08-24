@@ -764,6 +764,13 @@ body {
   color: rgba(255, 255, 255, var(--text-opacity));
 }
 
+.button-finish {
+  --text-opacity: 1;
+  color: #FF0049;
+  color: rgba(255, 0, 73, var(--text-opacity));
+  font-weight: 700;
+}
+
 /* ------------- Formulario ------------- */
 
 .form-row {

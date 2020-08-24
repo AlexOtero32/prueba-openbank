@@ -12,5 +12,11 @@
     "masterPassword": "Create your master password",
     "repeatMasterPassword": "Repeat your master password",
     "descriptionCreateHint": "You can also create a password hint to help you remember your master password.",
-    "createHint": "Create a hint to help you remember your password (optional)"
+    "createHint": "Create a hint to help you remember your password (optional)",
+    "passwordManagerCreatedTitle": "Your Password Manager has been created!",
+    "passwordManagerCreatedDescription": "Your Password Manager has been created, now you will be able to store your passwords in a safe place.",
+    "creationErrorTitle": "An error has occurred",
+    "creationErrorDescription": "We could not change your master password. Please try again later.",
+    "access": "Access",
+    "return": "Return to Password Manager >"
 }
