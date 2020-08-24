@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ProductInformation from '../steps/ProductInformation';
+import ProductInformation from '../../views/ProductInformation/index';
 
 const Wizard: React.FC<{}> = () => {
     return (

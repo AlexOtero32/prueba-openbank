@@ -1,12 +1,11 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import Wizard from '../wizard/Wizard';
-import WizardHeader from '../wizard/WizardHeader';
-import WizardBody from '../wizard/WizardBody';
-import WizardFooter from '../wizard/WizardFooter';
+import WizardHeader from '../../components/wizard/WizardHeader';
+import WizardBody from '../../components/wizard/WizardBody';
+import WizardFooter from '../../components/wizard/WizardFooter';
 
-import Button from '../common/Button';
+import Button from '../../components/common/Button';
 
 import FirstImage from '../../assets/img/notes.jpg';
 import SecondImage from '../../assets/img/padlock.jpg';
@@ -19,12 +18,12 @@ const ProductInformation: React.FC<{}> = () => {
             <WizardHeader />
             <WizardBody>
                 <h1 className="title">{t('createPasswordManager')}</h1>
-                <div className="flex">
-                    <div className="image-container">
+                <div className="flex flex-col sm:flex-row">
+                    <div className="image-container sm:mr-6">
                         <img src={FirstImage} alt={t('altFirstImage')} />
                         <p>{t('firstImage')}</p>
                     </div>
-                    <div className="image-container">
+                    <div className="image-container sm:ml-6">
                         <img src={SecondImage} alt={t('altSecondImage')} />
 
                         <p>{t('secondImage')}</p>
@@ -37,7 +36,7 @@ const ProductInformation: React.FC<{}> = () => {
             </WizardBody>
             <WizardFooter>
                 <Button type="cancel" text="Cancelar" />
-                <Button type="next" text="Siguiente" />
+                <Button type="next" text="Siguiente" disabled />
             </WizardFooter>
         </>
     );
