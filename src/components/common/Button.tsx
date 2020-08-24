@@ -1,11 +1,12 @@
 import React from 'react';
 import classnames from 'classnames';
 
-interface ButtonProps {
+type ButtonProps = {
     buttonStyle: 'next' | 'cancel' | 'finish';
     text: string;
     disabled?: boolean;
-}
+    onClick?: () => any;
+};
 
 const Button: React.FC<ButtonProps> = props => {
     return (
@@ -17,6 +18,7 @@ const Button: React.FC<ButtonProps> = props => {
                 'button-disabled': props.disabled,
             })}
             disabled={!!props.disabled}
+            onClick={props.onClick}
         >
             {props.text}
         </button>

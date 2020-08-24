@@ -7,9 +7,9 @@ import { useTranslation } from 'react-i18next';
 
 import { FaExclamationCircle, FaCheckCircle } from 'react-icons/fa';
 
-interface FeedbackProps {
+type FeedbackProps = {
     success: boolean;
-}
+};
 
 const Feedback: React.FC<FeedbackProps> = props => {
     const { t } = useTranslation('wizard');

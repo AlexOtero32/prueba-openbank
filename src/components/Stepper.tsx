@@ -2,11 +2,11 @@ import React from 'react';
 import classnames from 'classnames';
 import { FaCheck } from 'react-icons/fa';
 
-interface StepperProps {
+type StepperProps = {
     step: number;
     current: boolean;
     completed: boolean;
-}
+};
 
 const Stepper: React.FC<StepperProps> = props => {
     return (
