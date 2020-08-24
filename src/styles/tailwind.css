@@ -38,7 +38,7 @@ body {
     display: inline-block;
     padding-bottom: 5px;
     position: relative;
-    @apply text-2xl font-bold;
+    @apply text-2xl font-bold mb-4;
 }
 
 .title:before {
@@ -81,6 +81,24 @@ body {
 
 .button-next {
     @apply bg-secondary px-4 py-2 font-bold text-white;
+}
+
+/* ------------- Formulario ------------- */
+
+.form-row {
+    @apply flex w-full flex-col mt-2 mb-8;
+}
+
+.form-input-group {
+    @apply flex flex-col w-full;
+}
+
+.form-input-group label {
+    @apply font-bold;
+}
+
+.form-input {
+    @apply border-2 border-secondary px-4 py-2 border-opacity-50;
 }
 
 @tailwind utilities;

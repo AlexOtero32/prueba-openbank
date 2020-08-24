@@ -5,11 +5,11 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 // Traducciones en inglés
 import commonEN from './locale/en/common.json';
-import productInfoEN from './locale/en/productInfo.json';
+import wizardEN from './locale/en/wizard.json';
 
 // Traducciones en castellano
 import commonES from './locale/es/common.json';
-import productInfoES from './locale/es/productInfo.json';
+import wizardES from './locale/es/wizard.json';
 
 i18n.use(LanguageDetector)
     .use(initReactI18next)
@@ -18,11 +18,11 @@ i18n.use(LanguageDetector)
         resources: {
             en: {
                 common: commonEN,
-                productInfo: productInfoEN,
+                wizard: wizardEN,
             },
             es: {
                 common: commonES,
-                productInfo: productInfoES,
+                wizard: wizardES,
             },
         },
     });

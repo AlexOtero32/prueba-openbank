@@ -684,6 +684,7 @@ body {
   position: relative;
   font-size: 1.5rem;
   font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 .title:before {
@@ -702,6 +703,8 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1 1 0%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   text-align: center;
 }
 
@@ -759,6 +762,38 @@ body {
   --text-opacity: 1;
   color: #fff;
   color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+/* ------------- Formulario ------------- */
+
+.form-row {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-input-group label {
+  font-weight: 700;
+}
+
+.form-input {
+  border-width: 2px;
+  --border-opacity: 1;
+  border-color: #002B45;
+  border-color: rgba(0, 43, 69, var(--border-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  --border-opacity: 0.5;
 }
 
 .space-y-0 > :not(template) ~ :not(template) {

@@ -11,7 +11,7 @@ import FirstImage from '../../assets/img/notes.jpg';
 import SecondImage from '../../assets/img/padlock.jpg';
 
 const ProductInformation: React.FC<{}> = () => {
-    const { t } = useTranslation('productInfo');
+    const { t } = useTranslation('wizard');
 
     return (
         <>
@@ -35,8 +35,8 @@ const ProductInformation: React.FC<{}> = () => {
                 <p className="mt-2 mb-4">{t('whatCanYouSaveExplanation')}</p>
             </WizardBody>
             <WizardFooter>
-                <Button type="cancel" text="Cancelar" />
-                <Button type="next" text="Siguiente" disabled />
+                <Button buttonStyle="cancel" text="Cancelar" />
+                <Button buttonStyle="next" text="Siguiente" disabled />
             </WizardFooter>
         </>
     );

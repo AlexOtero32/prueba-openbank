@@ -1,11 +1,13 @@
 import React from 'react';
 
-import ProductInformation from '../../views/ProductInformation/index';
+// import ProductInformation from '../../views/ProductInformation/index';
+import Form from '../../views/Form/index';
 
 const Wizard: React.FC<{}> = () => {
     return (
         <div className="wizard">
-            <ProductInformation />
+            {/* <ProductInformation /> */}
+            <Form />
         </div>
     );
 };
