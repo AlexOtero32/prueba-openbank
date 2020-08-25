@@ -610,8 +610,8 @@ body {
   color: #002B45;
   color: rgba(0, 43, 69, var(--text-opacity));
   --bg-opacity: 1;
-  background-color: #e2e8f0;
-  background-color: rgba(226, 232, 240, var(--bg-opacity));
+  background-color: #FFF1E5;
+  background-color: rgba(255, 241, 229, var(--bg-opacity));
 }
 
 .wrapper {
@@ -706,6 +706,7 @@ body {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   text-align: center;
+  align-items: center;
 }
 
 .image-container img {

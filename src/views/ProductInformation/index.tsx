@@ -7,8 +7,8 @@ import WizardFooter from '../../components/wizard/WizardFooter';
 
 import Button from '../../components/common/Button';
 
-import FirstImage from '../../assets/img/notes.jpg';
-import SecondImage from '../../assets/img/padlock.jpg';
+import { ReactComponent as FirstSVG } from '../../assets/img/group.svg';
+import { ReactComponent as SecondSVG } from '../../assets/img/group-3.svg';
 import { changeScreen, exitWizard } from '../../redux/ui/actions';
 import { DisplayingScreen } from '../../redux/ui/types';
 import { connect, ConnectedProps } from 'react-redux';
@@ -25,12 +25,11 @@ const ProductInformation: React.FC<ProductInfoProps> = props => {
                 <h1 className="title">{t('createPasswordManager')}</h1>
                 <div className="flex flex-col sm:flex-row">
                     <div className="image-container sm:mr-6">
-                        <img src={FirstImage} alt={t('altFirstImage')} />
+                        <FirstSVG />
                         <p>{t('firstImage')}</p>
                     </div>
                     <div className="image-container sm:ml-6">
-                        <img src={SecondImage} alt={t('altSecondImage')} />
-
+                        <SecondSVG />
                         <p>{t('secondImage')}</p>
                     </div>
                 </div>

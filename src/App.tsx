@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 
 import Wizard from './components/wizard/Wizard';
+import Header from './components/Header';
 import HomeScreen from './views/Homescreen';
 
 import { RootState } from './redux/store';
@@ -9,7 +10,7 @@ import { connect, ConnectedProps } from 'react-redux';
 const App: React.FC<AppProps> = props => {
     return (
         <Suspense fallback="loading">
-            <header></header>
+            <Header />
             <main className="wrapper">
                 {props.isWizardOpen ? <Wizard /> : <HomeScreen />}
             </main>

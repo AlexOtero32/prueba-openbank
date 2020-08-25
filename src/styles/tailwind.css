@@ -3,7 +3,7 @@
 @tailwind components;
 
 body {
-    @apply text-secondary bg-gray-300;
+    @apply text-secondary bg-terciary;
 }
 
 .wrapper {
@@ -52,7 +52,7 @@ body {
 }
 
 .image-container {
-    @apply flex flex-col flex-1 my-2 text-center;
+    @apply flex flex-col flex-1 my-2 text-center items-center;
 }
 
 .image-container img {
