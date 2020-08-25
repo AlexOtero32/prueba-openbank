@@ -15,7 +15,7 @@ function renderScreen(screen: DisplayingScreen) {
         case DisplayingScreen.Form:
             return <Form />;
         case DisplayingScreen.Feedback:
-            return <Feedback success={true} />;
+            return <Feedback />;
     }
 }
 
