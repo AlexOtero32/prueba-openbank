@@ -9,8 +9,11 @@ import Button from '../../components/common/Button';
 
 import FirstImage from '../../assets/img/notes.jpg';
 import SecondImage from '../../assets/img/padlock.jpg';
+import { changeScreen, exitWizard } from '../../redux/ui/actions';
+import { DisplayingScreen } from '../../redux/ui/types';
+import { connect, ConnectedProps } from 'react-redux';
 
-const ProductInformation: React.FC<{}> = () => {
+const ProductInformation: React.FC<ProductInfoProps> = props => {
     const { t } = useTranslation('wizard');
 
     return (
@@ -35,11 +38,28 @@ const ProductInformation: React.FC<{}> = () => {
                 <p className="mt-2 mb-4">{t('whatCanYouSaveExplanation')}</p>
             </WizardBody>
             <WizardFooter>
-                <Button buttonStyle="cancel" text="Cancelar" />
-                <Button buttonStyle="next" text="Siguiente" disabled />
+                <Button
+                    buttonStyle="cancel"
+                    text={t('cancel')}
+                    onClick={props.exitWizard}
+                />
+                <Button
+                    buttonStyle="next"
+                    text={t('next')}
+                    onClick={props.goToNextPage}
+                />
             </WizardFooter>
         </>
     );
 };
 
-export default ProductInformation;
+const mapDispatchToProps = (dispatchEvent: any) => ({
+    goToNextPage: () => dispatchEvent(changeScreen(DisplayingScreen.Form)),
+    exitWizard: () => dispatchEvent(exitWizard()),
+});
+
+const connector = connect(null, mapDispatchToProps);
+
+type ProductInfoProps = ConnectedProps<typeof connector>;
+
+export default connector(ProductInformation);

@@ -1,13 +1,17 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+
 import WizardHeader from '../../components/wizard/WizardHeader';
 import WizardBody from '../../components/wizard/WizardBody';
 import WizardFooter from '../../components/wizard/WizardFooter';
 import Button from '../../components/common/Button';
-import { useTranslation } from 'react-i18next';
+
+import { exitWizard } from '../../redux/ui/actions';
+import { connect, ConnectedProps } from 'react-redux';
 
 import { FaExclamationCircle, FaCheckCircle } from 'react-icons/fa';
 
-type FeedbackProps = {
+type FeedbackProps = FeedbackScreenReduxProps & {
     success: boolean;
 };
 
@@ -22,6 +26,7 @@ const Feedback: React.FC<FeedbackProps> = props => {
                 <Button
                     text={t(props.success ? 'access' : 'return')}
                     buttonStyle="finish"
+                    onClick={props.exitWizard}
                 />
             </WizardFooter>
         </>
@@ -56,4 +61,12 @@ const Success: React.FC = () => {
     );
 };
 
-export default Feedback;
+const mapDispatchToProps = (dispatchEvent: any) => ({
+    exitWizard: () => dispatchEvent(exitWizard()),
+});
+
+const connector = connect(null, mapDispatchToProps);
+
+type FeedbackScreenReduxProps = ConnectedProps<typeof connector>;
+
+export default connector(Feedback);

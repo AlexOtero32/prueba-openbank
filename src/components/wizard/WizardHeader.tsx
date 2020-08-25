@@ -1,5 +1,5 @@
 import React from 'react';
-import Stepper from '../Stepper';
+import Stepper from '../common/Stepper';
 
 const WizardHeader: React.FC<{}> = () => {
     return (

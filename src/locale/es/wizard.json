@@ -18,5 +18,7 @@
     "creationErrorTitle": "Ha ocurrido un error",
     "creationErrorDescription": "No hemos podido modificar tu contraseña maestra. Inténtalo más tarde.",
     "access": "Acceder",
-    "return": "Volver a Password Manager >"
+    "return": "Volver a Password Manager >",
+    "cancel": "Cancelar",
+    "next": "Siguiente"
 }

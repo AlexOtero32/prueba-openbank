@@ -1,11 +1,16 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+
 import WizardHeader from '../../components/wizard/WizardHeader';
 import WizardBody from '../../components/wizard/WizardBody';
-import { useTranslation } from 'react-i18next';
 import WizardFooter from '../../components/wizard/WizardFooter';
 import Button from '../../components/common/Button';
 
-const Step3: React.FC<{}> = () => {
+import { changeScreen, exitWizard } from '../../redux/ui/actions';
+import { DisplayingScreen } from '../../redux/ui/types';
+import { connect, ConnectedProps } from 'react-redux';
+
+const FormScreen: React.FC<FormScreenProps> = props => {
     const { t } = useTranslation('wizard');
 
     return (
@@ -58,11 +63,28 @@ const Step3: React.FC<{}> = () => {
                 </form>
             </WizardBody>
             <WizardFooter>
-                <Button buttonStyle="cancel" text="Cancelar" />
-                <Button buttonStyle="next" text="Siguiente" disabled />
+                <Button
+                    buttonStyle="cancel"
+                    text={t('cancel')}
+                    onClick={props.exitWizard}
+                />
+                <Button
+                    buttonStyle="next"
+                    text={t('next')}
+                    onClick={props.goToNextPage}
+                />
             </WizardFooter>
         </>
     );
 };
 
-export default Step3;
+const mapDispatchToProps = (dispatchEvent: any) => ({
+    goToNextPage: () => dispatchEvent(changeScreen(DisplayingScreen.Feedback)),
+    exitWizard: () => dispatchEvent(exitWizard()),
+});
+
+const connector = connect(null, mapDispatchToProps);
+
+type FormScreenProps = ConnectedProps<typeof connector>;
+
+export default connector(FormScreen);

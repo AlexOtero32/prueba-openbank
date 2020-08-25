@@ -18,5 +18,7 @@
     "creationErrorTitle": "An error has occurred",
     "creationErrorDescription": "We could not change your master password. Please try again later.",
     "access": "Access",
-    "return": "Return to Password Manager >"
+    "return": "Return to Password Manager >",
+    "cancel": "Cancel",
+    "next": "Next"
 }
