@@ -10,12 +10,9 @@ import { exitWizard } from '../../redux/ui/actions';
 import { connect, ConnectedProps } from 'react-redux';
 
 import { FaExclamationCircle, FaCheckCircle } from 'react-icons/fa';
+import { RootState } from '../../redux/store';
 
-type FeedbackProps = FeedbackScreenReduxProps & {
-    success: boolean;
-};
-
-const Feedback: React.FC<FeedbackProps> = props => {
+const Feedback: React.FC<FeedbackScreenProps> = props => {
     const { t } = useTranslation('wizard');
 
     return (
@@ -65,8 +62,12 @@ const mapDispatchToProps = (dispatchEvent: any) => ({
     exitWizard: () => dispatchEvent(exitWizard()),
 });
 
-const connector = connect(null, mapDispatchToProps);
+const mapStateToProps = (state: RootState) => ({
+    success: state.ui.success,
+});
 
-type FeedbackScreenReduxProps = ConnectedProps<typeof connector>;
+const connector = connect(mapStateToProps, mapDispatchToProps);
+
+type FeedbackScreenProps = ConnectedProps<typeof connector>;
 
 export default connector(Feedback);

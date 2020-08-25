@@ -4,6 +4,8 @@ import {
     EXIT_WIZARD,
     UIActionTypes,
     OPEN_WIZARD,
+    SEND_PASSWORD,
+    SET_SUBMITTING,
 } from './types';
 
 export function changeScreen(screen: DisplayingScreen): UIActionTypes {
@@ -19,4 +21,12 @@ export function exitWizard(): UIActionTypes {
 
 export function openWizard(): UIActionTypes {
     return { type: OPEN_WIZARD };
+}
+
+export function sendPassword(success: boolean): UIActionTypes {
+    return { type: SEND_PASSWORD, payload: success };
+}
+
+export function setSubmitting(submitting: boolean): UIActionTypes {
+    return { type: SET_SUBMITTING, payload: submitting };
 }

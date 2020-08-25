@@ -12,17 +12,15 @@ const Header: React.FC = () => {
         <header>
             <nav className="flex items-center justify-between flex-wrap bg-gray-300 shadow-lg p-6">
                 <h1 className="flex items-center flex-shrink-0 text-white mr-6">
-                    <img src={LogoOpenBank} />
+                    <img src={LogoOpenBank} alt="Logo" />
                 </h1>
-                <div className="">
-                    <button
-                        type="button"
-                        className="inline-block px-4 py-2 leading-none border rounded text-secondary border-secondary hover:border-transparent hover:bg-transparent"
-                        onClick={changeLanguage}
-                    >
-                        {t('changeLanguage')}
-                    </button>
-                </div>
+                <button
+                    type="button"
+                    className="inline-block px-4 py-2 leading-none border rounded text-secondary border-secondary hover:border-transparent hover:bg-transparent"
+                    onClick={changeLanguage}
+                >
+                    {t('changeLanguage')}
+                </button>
             </nav>
         </header>
     );
