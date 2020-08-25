@@ -1,4 +1,6 @@
 {
     "openModalButton": "Get started",
-    "changeLanguage": "Change Language"
+    "changeLanguage": "Change Language",
+    "welcome": "Welcome to the OpenClose Current Account registration",
+    "initialExplanation": "Click on \"Get started\" to launch the registration wizard."
 }

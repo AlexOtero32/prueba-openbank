@@ -1,4 +1,6 @@
 {
     "openModalButton": "Comenzar",
-    "changeLanguage": "Cambiar idioma"
+    "changeLanguage": "Cambiar idioma",
+    "welcome": "Bienvenido al registro de la Cuenta Corriente OpenClose",
+    "initialExplanation": "Pinche en \"Comenzar\" para iniciar el asistente de registro."
 }
