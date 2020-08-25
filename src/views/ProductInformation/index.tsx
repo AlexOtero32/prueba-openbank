@@ -42,6 +42,7 @@ const ProductInformation: React.FC<ProductInfoProps> = props => {
                         type="checkbox"
                         name="conditions"
                         id="conditions"
+                        data-testid="accept-checkbox"
                         checked={conditionsAccepted}
                         onChange={() =>
                             setConditionsAccepted(!conditionsAccepted)

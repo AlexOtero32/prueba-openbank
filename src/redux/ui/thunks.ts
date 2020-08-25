@@ -2,7 +2,7 @@ import { Action } from 'redux';
 import { sendPassword, setSubmitting, changeScreen } from './actions';
 import { RootState } from '../store';
 import { ThunkAction } from 'redux-thunk';
-import { submitForm } from '../../services/api.js';
+import { submitForm } from '../../services/api';
 import { DisplayingScreen } from './types';
 
 export const sendPasswordThunk = (values: {

@@ -2,7 +2,7 @@ import uiReducer from './ui/reducer';
 import { combineReducers, createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 
-const rootReducer = combineReducers({
+export const rootReducer = combineReducers({
     ui: uiReducer,
 });
 

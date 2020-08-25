@@ -44,6 +44,7 @@ const FormScreen: React.FC<FormScreenProps> = props => {
                                     <Field<string>
                                         name="masterPassword"
                                         component={FormInput}
+                                        data-testid="password"
                                         type={
                                             showPassword ? 'text' : 'password'
                                         }
@@ -71,6 +72,7 @@ const FormScreen: React.FC<FormScreenProps> = props => {
                                     <Field<string>
                                         name="repeatMasterPassword"
                                         component={FormInput}
+                                        data-testid="repeat-password"
                                         type={
                                             showPassword ? 'text' : 'password'
                                         }
@@ -98,6 +100,7 @@ const FormScreen: React.FC<FormScreenProps> = props => {
                                 <div className="form-input">
                                     <Field<string>
                                         name="hint"
+                                        data-testid="hint-input"
                                         component={FormInput}
                                         type="text"
                                         className="w-full"
