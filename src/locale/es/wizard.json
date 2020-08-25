@@ -20,5 +20,8 @@
     "access": "Acceder",
     "return": "Volver a Password Manager >",
     "cancel": "Cancelar",
-    "next": "Siguiente"
+    "next": "Siguiente",
+    "conditions": "Confirmo que soy mayor de edad y acepto el uso de mis datos por parte de OpenBank según la ",
+    "privacyPolicy": "política de protección de datos.",
+    "mustAcceptConditions": "Debes aceptar las condiciones de privacidad"
 }

@@ -16,6 +16,8 @@ import { connect, ConnectedProps } from 'react-redux';
 const ProductInformation: React.FC<ProductInfoProps> = props => {
     const { t } = useTranslation('wizard');
 
+    const [conditionsAccepted, setConditionsAccepted] = React.useState(false);
+
     return (
         <>
             <WizardHeader />
@@ -36,6 +38,23 @@ const ProductInformation: React.FC<ProductInfoProps> = props => {
                 <p className="mt-2 mb-4">{t('howItWorksExplanation')}</p>
                 <h3 className="font-bold">{t('whatCanYouSave')}</h3>
                 <p className="mt-2 mb-4">{t('whatCanYouSaveExplanation')}</p>
+                <div>
+                    <input
+                        type="checkbox"
+                        name="conditions"
+                        id="conditions"
+                        checked={conditionsAccepted}
+                        onChange={() =>
+                            setConditionsAccepted(!conditionsAccepted)
+                        }
+                    />
+                    <label htmlFor="conditions" className="ml-2 font-bold">
+                        {t('conditions')}
+                        <a href="#conditions" className="text-primary">
+                            {t('privacyPolicy')}
+                        </a>
+                    </label>
+                </div>
             </WizardBody>
             <WizardFooter>
                 <Button
@@ -47,6 +66,7 @@ const ProductInformation: React.FC<ProductInfoProps> = props => {
                     buttonStyle="next"
                     text={t('next')}
                     onClick={props.goToNextPage}
+                    disabled={!conditionsAccepted}
                 />
             </WizardFooter>
         </>
