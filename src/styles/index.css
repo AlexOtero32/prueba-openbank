@@ -806,6 +806,7 @@ body {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   --border-opacity: 0.5;
+  display: flex;
 }
 
 .space-y-0 > :not(template) ~ :not(template) {
