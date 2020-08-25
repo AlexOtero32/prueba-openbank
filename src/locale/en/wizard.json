@@ -23,5 +23,9 @@
     "next": "Next",
     "conditions": "I confirm that I am of legal age and I accept the use of my data by OpenBank according to the ",
     "privacyPolicy": "data protection policy.",
-    "mustAcceptConditions": "You must accept the conditions"
+    "mustAcceptConditions": "You must accept the privacy conditions",
+    "passwordRequired": "Password is required",
+    "passwordBetween8and24": "Password must be between 8 and 24 characters long",
+    "passwordsDoNotMatch": "Passwords do not match",
+    "invalidPassword": "Password must include at least one uppercase letter, one lowercase lettera and one number, and must not include special characters"
 }

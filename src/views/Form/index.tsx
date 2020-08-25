@@ -1,5 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { connect, ConnectedProps } from 'react-redux';
+import { FaEyeSlash, FaEye } from 'react-icons/fa';
 
 import WizardHeader from '../../components/wizard/WizardHeader';
 import WizardBody from '../../components/wizard/WizardBody';
@@ -12,8 +14,8 @@ import { Form, Field } from 'react-final-form';
 
 import { changeScreen, exitWizard } from '../../redux/ui/actions';
 import { DisplayingScreen } from '../../redux/ui/types';
-import { connect, ConnectedProps } from 'react-redux';
-import { FaEyeSlash, FaEye } from 'react-icons/fa';
+import { validatePassword } from '../../lib/helpers';
+import { TFunction } from 'i18next';
 
 const FormScreen: React.FC<FormScreenProps> = props => {
     const { t } = useTranslation('wizard');
@@ -24,7 +26,14 @@ const FormScreen: React.FC<FormScreenProps> = props => {
         <>
             <Form
                 onSubmit={() => {}}
-                render={({ handleSubmit, submitting, pristine, values }) => (
+                validate={validatePassword}
+                render={({
+                    handleSubmit,
+                    submitting,
+                    pristine,
+                    values,
+                    errors,
+                }) => (
                     <>
                         <WizardHeader />
                         <WizardBody>
@@ -47,6 +56,8 @@ const FormScreen: React.FC<FormScreenProps> = props => {
                                                         ? 'text'
                                                         : 'password'
                                                 }
+                                                minLength={8}
+                                                maxLength={24}
                                                 className="w-full"
                                             />
                                             {renderVisibilityButton(
@@ -54,6 +65,12 @@ const FormScreen: React.FC<FormScreenProps> = props => {
                                                 setShowPassword
                                             )}
                                         </div>
+                                        {!pristine &&
+                                            renderError(
+                                                values.masterPassword,
+                                                errors.masterPassword,
+                                                t
+                                            )}
                                     </div>
                                     <div className="form-input-group">
                                         <label htmlFor="repeatMasterPassword">
@@ -68,6 +85,8 @@ const FormScreen: React.FC<FormScreenProps> = props => {
                                                         ? 'text'
                                                         : 'password'
                                                 }
+                                                minLength={8}
+                                                maxLength={24}
                                                 className="w-full"
                                             />
                                             {renderVisibilityButton(
@@ -75,6 +94,12 @@ const FormScreen: React.FC<FormScreenProps> = props => {
                                                 setShowPassword
                                             )}
                                         </div>
+                                        {!pristine &&
+                                            renderError(
+                                                values.repeatMasterPassword,
+                                                errors.repeatMasterPassword,
+                                                t
+                                            )}
                                     </div>
                                 </div>
                                 <p>{t('descriptionCreateHint')}</p>
@@ -107,7 +132,11 @@ const FormScreen: React.FC<FormScreenProps> = props => {
                                 buttonStyle="next"
                                 text={t('next')}
                                 onClick={props.goToNextPage}
-                                disabled={pristine || submitting}
+                                disabled={
+                                    pristine ||
+                                    submitting ||
+                                    Object.keys(errors).length > 0
+                                }
                             />
                         </WizardFooter>
                     </>
@@ -131,6 +160,16 @@ function renderVisibilityButton(
 
 function renderCharactersRemaining(value: string): JSX.Element {
     return <span className="self-end">{value ? value.length : 0}/255</span>;
+}
+
+function renderError(
+    value: string,
+    error: string,
+    t: TFunction
+): JSX.Element | null {
+    if (!!value && error)
+        return <p className="text-sm text-primary">{t(error)}</p>;
+    return null;
 }
 
 const mapDispatchToProps = (dispatchEvent: any) => ({

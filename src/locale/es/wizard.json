@@ -23,5 +23,9 @@
     "next": "Siguiente",
     "conditions": "Confirmo que soy mayor de edad y acepto el uso de mis datos por parte de OpenBank según la ",
     "privacyPolicy": "política de protección de datos.",
-    "mustAcceptConditions": "Debes aceptar las condiciones de privacidad"
+    "mustAcceptConditions": "Debes aceptar las condiciones de privacidad",
+    "passwordRequired": "La contraseña es obligatoria",
+    "passwordBetween8and24": "La contraseña debe tener entre 8 y 24 caracteres",
+    "passwordsDoNotMatch": "Las contraseñas no coinciden",
+    "invalidPassword": "La contraseña debe incluír al menos una mayúscula, una minúscula y un número y no debe incluír caracteres especiales"
 }
